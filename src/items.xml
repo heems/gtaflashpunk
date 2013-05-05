@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+	<ranged>
+		<item>
+			<id>pistol</id>
+			<image>img/pistol.jpg</image>
+			<damage>5</damage>
+			<speed>5</speed>
+		</item>
+	</ranged>
+</items>
