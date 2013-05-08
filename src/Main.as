@@ -20,7 +20,6 @@ package
 			_gameWorld = new GameWorld();
 			items = new Vector.<Item>();
 			xmlLoader = new URLLoader();
-			FP.log("works");
         }
 
 		override public function init():void
@@ -30,13 +29,11 @@ package
 			var url:URLRequest = new URLRequest("../src/items.xml");
 			xmlLoader.load(url);
 			xmlLoader.addEventListener(Event.COMPLETE, onXmlLoad);
-			FP.log("works");	// doesn't work :(
 		}
 		
 		public function onXmlLoad(e:Event):void {
 			xml = new XML(xmlLoader.data);
-			trace(xml.items.ranged.item.id);
-			FP.log(xml.items.ranged.item.id);
+			FP.log(xml.toXMLString());
 		}
     }
  
