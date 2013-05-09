@@ -9,7 +9,7 @@ package
     public class Main extends Engine
     {
 		private var _gameWorld:GameWorld;
-		private var items:Vector.<Item>;
+		public var items:Vector.<Item>;
 		private var xmlLoader:URLLoader;
 		private var xml:XML;
 		

@@ -9,11 +9,12 @@ package {
 		[Embed(source = "img/playertemp.png")] private const IMAGE:Class;
 		private const HEIGHT:Number = 16;
 		private const WIDTH:Number = 16;
-		private var inv:Vector.<Item>
+		public var inv:Vector.<Item>
 		public function Player() {
 			graphic = new Image(IMAGE);
 			x = 500;
 			y = 500;
+			setHitbox(WIDTH, HEIGHT);
 		}
 		
 		override public function update():void {
