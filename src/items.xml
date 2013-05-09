@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <items>
 	<ranged>
-		<item>
-			<id>pistol</id>
+		<item id="1">
+			<name>pistol</name>
 			<image>img/pistol.jpg</image>
 			<damage>5</damage>
-			<speed>5</speed>
+			<!-- Shots per second -->
+			<fire_speed>50</fire_speed>
+			<bullet_speed>5</bullet_speed>
 		</item>
 	</ranged>
 </items>

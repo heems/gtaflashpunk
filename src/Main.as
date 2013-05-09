@@ -33,7 +33,9 @@ package
 		
 		public function onXmlLoad(e:Event):void {
 			xml = new XML(xmlLoader.data);
-			FP.log(xml.toXMLString());
+			//FP.log(xml.toXMLString());
+			FP.log(xml.ranged.item.@id);
+			FP.log(xml.ranged.item.name);
 		}
     }
  
