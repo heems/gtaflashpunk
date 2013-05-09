@@ -9,5 +9,13 @@
 			<fire_speed>50</fire_speed>
 			<bullet_speed>5</bullet_speed>
 		</item>
+		<item id="2">
+			<name>dildo</name>
+			<image>img/pistol.jpg</image>
+			<damage>5</damage>
+			<!-- Shots per second -->
+			<fire_speed>50</fire_speed>
+			<bullet_speed>5</bullet_speed>
+		</item>		
 	</ranged>
 </items>

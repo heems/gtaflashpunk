@@ -13,7 +13,7 @@ package
         {
 			super(n, d);
 			speed = s;
-			[Embed(source = path)] IMAGE;
+			//[Embed(source = path)] IMAGE;  clarence fix pls
         }
 
 		override public function update():void
