@@ -3,7 +3,7 @@
 	<ranged>
 		<item id="1">
 			<name>pistol</name>
-			<image>img/pistol.jpg</image>
+			<image>"img/pistol.jpg"</image>
 			<damage>5</damage>
 			<!-- Shots per second -->
 			<fire_speed>50</fire_speed>
@@ -11,7 +11,7 @@
 		</item>
 		<item id="2">
 			<name>dildo</name>
-			<image>img/pistol.jpg</image>
+			<image>"img/pistol.jpg"</image>
 			<damage>5</damage>
 			<!-- Shots per second -->
 			<fire_speed>50</fire_speed>

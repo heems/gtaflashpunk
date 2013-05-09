@@ -2,6 +2,8 @@ package
 {
     import net.flashpunk.World;
 	import net.flashpunk.FP;
+	import net.flashpunk.utils.Input;
+	import net.flashpunk.utils.Key;
      
     public class GameWorld extends World 
     {
@@ -33,7 +35,7 @@ package
 		
 		public function getItem():void {
 			for each (var i:Item in Main.items){
-				if (player.collideWith(i)) {
+				if (player.collideWith(i, player.x, player.y)) {
 					remove(i);
 					player.inv.push(i);					
 				}

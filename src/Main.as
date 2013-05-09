@@ -9,7 +9,7 @@ package
     public class Main extends Engine
     {
 		private var _gameWorld:GameWorld;
-		public var items:Vector.<Item>;
+		public static var items:Vector.<Item>;
 		private var xmlLoader:URLLoader;
 		private var xml:XML;
 		
@@ -39,7 +39,7 @@ package
 			FP.log(rangedItems);
 
 			for each (var item:XML in rangedItems) {
-				FP.log(item.fire_speed);
+				FP.log(item.image);
 				items.push(new RangedItem(item.fire_speed, item.name, item.damage, item.image));
 			}
 		}
