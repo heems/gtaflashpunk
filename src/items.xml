@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <items>
+	<!-- ID: 1 -->
+	<!-- ID: class id, sub-id -->
 	<ranged>
-		<item id="1">
+		<item id="11">
 			<name>pistol</name>
 			<image>"img/pistol.jpg"</image>
 			<damage>5</damage>
 			<!-- Shots per second -->
-			<fire_speed>50</fire_speed>
+			<speed>50</speed>
 			<bullet_speed>5</bullet_speed>
-		</item>
-		<item id="2">
-			<name>dildo</name>
-			<image>"img/pistol.jpg"</image>
-			<damage>5</damage>
-			<!-- Shots per second -->
-			<fire_speed>50</fire_speed>
-			<bullet_speed>5</bullet_speed>
-		</item>		
+		</item>	
 	</ranged>
+	
+	<!-- ID: 2 -->
+	<melee>
+		<item id="21">
+			<name>dildo</name>
+			<image>"img/dildo.jpg"</image>
+			<damage>5</damage>
+			<speed>50</speed>
+			<bullet_speed>0</bullet_speed>
+		</item>
+	</melee>
 </items>

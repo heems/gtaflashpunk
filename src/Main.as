@@ -40,7 +40,7 @@ package
 
 			for each (var item:XML in rangedItems) {
 				FP.log(item.image);
-				items.push(new RangedItem(item.fire_speed, item.name, item.damage, item.image));
+				items.push(new RangedItem(item.speed, item.name, item.damage, item.image));
 			}
 		}
     }

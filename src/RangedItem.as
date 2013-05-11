@@ -7,13 +7,11 @@ package
 	
 		public var speed:Number;
 		
-		
-         
         public function RangedItem(s:Number, n:String, d:Number, path:String):void
         {
 			super(n, d);
 			speed = s;
-			[Embed(source = path)] const IMAGE:Class;;  //clarence fix pls
+			[Embed(source = path)] const IMAGE:Class;;
         }
 
 		override public function update():void
