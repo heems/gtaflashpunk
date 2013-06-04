@@ -1,6 +1,8 @@
 package
 {
 	import net.flashpunk.FP;
+	import net.flashpunk.Graphic;
+	import net.flashpunk.graphics.Image;
      
     public class RangedItem extends Item
     {
@@ -9,11 +11,11 @@ package
 		
 		
          
-        public function RangedItem(s:Number, n:String, d:Number, path:String):void
+        public function RangedItem(s:Number, n:String, d:Number, graphic:Graphic):void
         {
 			super(n, d);
 			speed = s;
-			[Embed(source = path)] const IMAGE:Class;;  //clarence fix pls
+			graphic = new Image(graphic);  //clarence fix pls
         }
 
 		override public function update():void
