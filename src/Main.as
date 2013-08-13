@@ -1,5 +1,7 @@
 package
 {
+import flash.display.Graphics;
+import flash.utils.Dictionary;
     import net.flashpunk.Engine;
 	import net.flashpunk.FP;
 	import flash.events.Event;
@@ -12,8 +14,6 @@ package
 		public static var items:Vector.<Item>;
 		private var xmlLoader:URLLoader;
 		private var xml:XML;
-		
-         
         public function Main():void
         {
 			super(800, 600, 60, false);
@@ -32,15 +32,13 @@ package
 		}
 		
 		public function onXmlLoad(e:Event):void {
-			xml = new XML(xmlLoader.data);
-			FP.log(xml.ranged.item.@id);
-			FP.log(xml.ranged.item.name);
-			var rangedItems:XMLList = xml.ranged.item;
-			FP.log(rangedItems);
+			var xmlData:XML = new XML();
+			xmlData = new XML(e.target.data);
+			var rangedItems:XMLList = xmlData.ranged.item;
 
 			for each (var item:XML in rangedItems) {
-				FP.log(item.image);
-				items.push(new RangedItem(item.speed, item.name, item.damage, item.image));
+				items.push(new RangedItem(item.speed, item.name, item.damage, '/img/gun.png'));
+				FP.log("pushed item");
 			}
 		}
     }

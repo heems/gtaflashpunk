@@ -17,8 +17,11 @@ package
 			add(player);
 			enemy = new Gangster();
 			add(enemy);
-			for each (var i:Item in Main.items)
+			for each (var i:Item in Main.items) {
+				FP.log("adding item to world");
 				add(i);
+				FP.log(i.x + " " + i.y);
+			}
         }
 		
 		public function moveCamera():void {
@@ -28,21 +31,8 @@ package
 		
 		override public function update():void {
 			moveCamera();
-			if (Input.check(Key.SPACE))
-				getItem();
 			super.update();
 		}
-		
-		public function getItem():void {
-			for each (var i:Item in Main.items){
-				if (player.collideWith(i, player.x, player.y)) {
-					remove(i);
-					player.inv.push(i);					
-				}
-			}
-					
-		}
-         
     }
  
 }

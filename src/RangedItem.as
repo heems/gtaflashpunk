@@ -1,6 +1,8 @@
 package
 {
 	import net.flashpunk.FP;
+	import net.flashpunk.Graphic;
+	import net.flashpunk.graphics.Image;
      
     public class RangedItem extends Item
     {
@@ -11,8 +13,10 @@ package
         {
 			super(n, d);
 			speed = s;
-			[Embed(source = path)] const IMAGE:Class;;
-        }
+			[Embed(source="img/gun.png", mimeType="image/png")] const IMAGE:Class;
+		}
+         
+
 
 		override public function update():void
 		{

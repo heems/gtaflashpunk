@@ -6,31 +6,36 @@ package {
 	import net.flashpunk.utils.Key;
 	
 	public class Player extends Entity {
-		[Embed(source = "img/playertemp.png")] private const IMAGE:Class;
 		private const HEIGHT:Number = 16;
 		private const WIDTH:Number = 16;
 		public var inv:Vector.<Item>
+		[Embed(source="img/playertemp.png", mimeType="image/png")] const IMAGE:Class;
+		
 		public function Player() {
 			graphic = new Image(IMAGE);
 			x = 500;
 			y = 500;
 			setHitbox(WIDTH, HEIGHT);
+			
+			type = "player";
 		}
 		
 		override public function update():void {
-			if (Input.check(Key.A))
-				x -= 50 * FP.elapsed;
-			else if (Input.check(Key.D))
+			if (Input.check(Key.D))
 				x += 50 * FP.elapsed;
+			else if (Input.check(Key.A))
+				x -= 50 * FP.elapsed;
 			
-			if (Input.check(Key.W))
-				y -= 50 * FP.elapsed;
-			else if (Input.check(Key.S))
+			if (Input.check(Key.S))
 				y += 50 * FP.elapsed;
+			else if (Input.check(Key.W))
+				y -= 50 * FP.elapsed;
+			
+			if (Input.check(Key.F))
+				checkActions();
+			
 			
 			checkBounds();
-			
-			
 		}
 		
 		public function checkBounds():void {
@@ -42,6 +47,15 @@ package {
 				y = FP.height - HEIGHT;
 			else if (y < 0)
 				y = 0;
+		}
+		
+		public function checkActions():void {
+			if (collide("item", x, y)) {
+				var item:Item = collide("item", x, y) as Item;
+				inv.push(item);
+				FP.log("hit item");
+				FP.world.remove(item);
+			}
 		}
 	}
 }
