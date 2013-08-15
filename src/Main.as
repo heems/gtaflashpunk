@@ -38,7 +38,6 @@ package
 
 			for each (var item:XML in rangedItems) {
 				items.push(new RangedItem(item.speed, item.name, item.damage, '/img/gun.png'));
-				FP.log("pushed item");
 			}
 			_gameWorld.updateItems();
 		}
