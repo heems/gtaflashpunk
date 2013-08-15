@@ -9,14 +9,16 @@ package
 	
 		public var speed:Number;
 		
+		[Embed(source = "img/gun.png")] 
+		public const IMAGE:Class;
+		
         public function RangedItem(s:Number, n:String, d:Number, path:String):void
         {
 			super(n, d);
+			graphic = new Image(IMAGE);
 			speed = s;
-			[Embed(source="img/gun.png", mimeType="image/png")] const IMAGE:Class;
+			
 		}
-         
-
 
 		override public function update():void
 		{

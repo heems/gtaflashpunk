@@ -10,13 +10,14 @@ package
 		         
         public function Item(n:String, d:Number):void
          {
-			
-			x = 400;
-			y = 500;
 			name = n;
 			dmg = d;	
 			x = Math.random() * FP.width;
 			y = Math.random() * FP.height;
+			
+			//for testing
+			x = 550;
+			y = 550;
 			
 			type = "item";
         }

@@ -29,6 +29,14 @@ package
 			FP.camera.y = player.y - FP.height/2;
 		}
 		
+		public function updateItems():void {
+			for each (var i:Item in Main.items) {
+				FP.log("adding item to world");
+				add(i);
+				FP.log(i.x + " " + i.y);
+			}
+		}
+		
 		override public function update():void {
 			moveCamera();
 			super.update();

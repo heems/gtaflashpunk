@@ -9,7 +9,8 @@ package {
 		private const HEIGHT:Number = 16;
 		private const WIDTH:Number = 16;
 		public var inv:Vector.<Item>
-		[Embed(source="img/playertemp.png", mimeType="image/png")] const IMAGE:Class;
+		[Embed(source = "img/playertemp.png", mimeType = "image/png")] 
+		public const IMAGE:Class;
 		
 		public function Player() {
 			graphic = new Image(IMAGE);
