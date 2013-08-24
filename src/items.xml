@@ -5,7 +5,7 @@
 	<ranged>
 		<item id="11">
 			<name>pistol</name>
-			<image>"img/pistol.jpg"</image>
+			<image>"pistol.png"</image>
 			<damage>5</damage>
 			<!-- Shots per second -->
 			<speed>50</speed>

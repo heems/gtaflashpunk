@@ -1,5 +1,6 @@
 package 
 {
+	
     import net.flashpunk.World;
 	import net.flashpunk.FP;
 	import net.flashpunk.utils.Input;
@@ -17,12 +18,20 @@ package
 			add(player);
 			enemy = new Gangster();
 			add(enemy);
+			var hotbar:Hotbar = new Hotbar();
+			add(hotbar);
+        }
+		
+		public function loadItems():void {
 			for each (var i:Item in Main.items) {
 				FP.log("adding item to world");
+				trace("adding item to world");
 				add(i);
 				FP.log(i.x + " " + i.y);
+				trace(i.x + " " + i.y);
+				player.inv.push(i);
 			}
-        }
+		}
 		
 		public function moveCamera():void {
 			FP.camera.x = player.x - FP.width/2;
@@ -32,6 +41,22 @@ package
 		override public function update():void {
 			moveCamera();
 			super.update();
+		}
+		
+		public function drawHotbarItems():void
+		{
+			var i:int = 0;
+			
+			for each (var item:Item in player.inv)
+			{
+				if (i > 9) {
+					break;
+				}
+				
+				add(new HotbarItem(item, i));
+				
+				i++;
+			}
 		}
     }
  

@@ -11,8 +11,8 @@ package
         public function Item(n:String, d:Number):void
          {
 			
-			x = 400;
-			y = 500;
+			x = 300;
+			y = 300;
 			name = n;
 			dmg = d;	
 			x = Math.random() * FP.width;

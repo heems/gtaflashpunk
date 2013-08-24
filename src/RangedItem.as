@@ -13,7 +13,7 @@ package
         {
 			super(n, d);
 			speed = s;
-			[Embed(source="img/gun.png", mimeType="image/png")] const IMAGE:Class;
+			graphic = new Image(Assets.PISTOL);
 		}
          
 
