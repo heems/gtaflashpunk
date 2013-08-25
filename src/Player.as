@@ -8,9 +8,11 @@ package {
 	public class Player extends Entity {
 		private const HEIGHT:Number = 16;
 		private const WIDTH:Number = 16;
-		public var inv:Vector.<Item>
+		public var inv:Vector.<Item>;
 		
 		public function Player() {
+			inv = new Vector.<Item>();
+			inv.push(new RangedItem(10, "swag", 10, "swag"));
 			graphic = new Image(Assets.PLAYER);
 			x = 500;
 			y = 500;

@@ -20,6 +20,8 @@ package
 			add(enemy);
 			var hotbar:Hotbar = new Hotbar();
 			add(hotbar);
+			loadItems();
+			drawHotbarItems();
         }
 		
 		public function loadItems():void {
